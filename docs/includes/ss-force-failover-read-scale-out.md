@@ -30,6 +30,7 @@ When the previous primary replica recovers, it will also assume the primary role
 ```SQL
 ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 ```
+##Note: You need to run above command on all other secondary replicas if there are more than two nodes.
 
 ### Manual failover without data loss
 
@@ -78,6 +79,7 @@ To manually fail over without data loss:
    ALTER AVAILABILITY GROUP [ag1] 
         SET (ROLE = SECONDARY); 
    ```
+##Note: You need to run above command on all other secondary replicas if there are more than two nodes.
 
 5. Promote the target secondary replica to primary. 
 
